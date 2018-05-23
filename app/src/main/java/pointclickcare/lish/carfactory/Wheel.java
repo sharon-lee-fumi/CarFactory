@@ -1,5 +1,8 @@
 package pointclickcare.lish.carfactory;
 
-public interface Wheel {
-    String wheel();
+public abstract class Wheel {
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName();
+    }
 }

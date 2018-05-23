@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Car Factory</string>
+    <string name="button_title_create_sedan">Create Sedan</string>
+    <string name="button_title_create_pickup">Create Pickup</string>
+    <string name="button_title_create_suv">Create SUV</string>
+    <string name="button_title_create_sports_car">Create SportsCar</string>
 </resources>

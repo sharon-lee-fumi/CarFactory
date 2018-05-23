@@ -1,58 +1,15 @@
 package pointclickcare.lish.carfactory;
 
-public class SedanFactory implements CarFactory{
+public class SedanFactory implements CarAbstractFactory {
     @Override
-    public Handle createHandle() {
-        return new SedanSuvSportsHandle();
-    }
+    public Car createCar() {
+        Sedan sedan = new Sedan();
 
-    @Override
-    public Windshield createWindshield() {
-        return new SedanSuvWindshield();
-    }
+        sedan.engine = new Engine1();
+        sedan.frame = new Frame1();
+        sedan.handle = new Handle1();
+        sedan.wheel = new Wheel1();
 
-    @Override
-    public Wheel createWheel() {
-        return new Wheel() {
-            @Override
-            public String wheel() {
-                return "Sedan wheel";
-            }
-        };
-    }
-
-    @Override
-    public Tire createTire() {
-        return new Tire() {
-            @Override
-            public String tire() {
-                return "Sedan tire";
-            }
-        };
-    }
-
-    @Override
-    public Frame createFrame() {
-        return new Frame() {
-            @Override
-            public String frame() {
-                return "Sedan frame";
-            }
-        };
-    }
-
-    @Override
-    public Lights createLights() {
-        return new SedanSuvLights();
-    }
-
-    @Override
-    public Engine createEngine() {
-        return new Engine() {
-            @Override
-            public String engine() {
-                return "Sedan engine";
-            }
-        };
+        return sedan;
     }
 }

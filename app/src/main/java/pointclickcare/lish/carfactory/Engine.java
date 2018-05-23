@@ -1,5 +1,8 @@
 package pointclickcare.lish.carfactory;
 
-public interface Engine {
-    String engine();
+public abstract class Engine {
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName();
+    }
 }
