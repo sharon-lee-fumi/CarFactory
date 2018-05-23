@@ -1,5 +1,8 @@
 package pointclickcare.lish.carfactory;
 
-public interface Handle {
-    String handle();
+public abstract class Handle {
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName();
+    }
 }

@@ -1,5 +1,8 @@
 package pointclickcare.lish.carfactory;
 
-public interface Frame {
-    String frame();
+public abstract class Frame {
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName();
+    }
 }

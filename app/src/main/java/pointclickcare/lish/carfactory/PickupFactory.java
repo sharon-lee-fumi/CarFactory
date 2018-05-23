@@ -1,53 +1,15 @@
 package pointclickcare.lish.carfactory;
 
-public class PickupFactory implements CarFactory{
+public class PickupFactory implements CarAbstractFactory {
     @Override
-    public Handle createHandle() {
-        return new Handle() {
-            @Override
-            public String handle() {
-                return "Pickup handle";
-            }
-        };
-    }
+    public Car createCar() {
+        PickUp pickup = new PickUp();
 
-    @Override
-    public Windshield createWindshield() {
-        return new Windshield() {
-            @Override
-            public String windshield() {
-                return "Pickup windshield";
-            }
-        };
-    }
+        pickup.engine = new Engine2();
+        pickup.frame = new Frame2();
+        pickup.handle = new Handle2();
+        pickup.wheel = new Wheel2();
 
-    @Override
-    public Wheel createWheel() {
-        return new PickupSuvWheel();
-    }
-
-    @Override
-    public Tire createTire() {
-        return new PickupSuvTire();
-    }
-
-    @Override
-    public Frame createFrame() {
-        return new PickupSuvFrame();
-    }
-
-    @Override
-    public Lights createLights() {
-        return new Lights() {
-            @Override
-            public String lights() {
-                return "Pickup lights";
-            }
-        };
-    }
-
-    @Override
-    public Engine createEngine() {
-        return new PickupSuvEngine();
+        return pickup;
     }
 }

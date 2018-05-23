@@ -1,41 +1,35 @@
 package pointclickcare.lish.carfactory;
 
-import android.support.v7.app.AppCompatActivity;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
+
+import pointclickcare.lish.carfactory.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView createdCarView;
+    ActivityMainBinding mBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
     }
 
-    public void ClickSedan(View view)
-    {
-        createdCarView = findViewById(R.id.CreatedCar);
-        createdCarView.setText(Car.createSedan());
+    public void ClickSedan(View view) {
+        mBinding.setCreatedCar(CarFactory.createSedan());
     }
 
-    public void ClickPickup(View view)
-    {
-        createdCarView = findViewById(R.id.CreatedCar);
-        createdCarView.setText(Car.createPickup());
+    public void ClickPickup(View view) {
+        mBinding.setCreatedCar(CarFactory.createPickup());
     }
 
-    public void ClickSUV(View view)
-    {
-        createdCarView = findViewById(R.id.CreatedCar);
-        createdCarView.setText(Car.createSUV());
+    public void ClickSUV(View view) {
+        mBinding.setCreatedCar(CarFactory.createSUV());
     }
 
-    public void ClickSportsCar(View view)
-    {
-        createdCarView = findViewById(R.id.CreatedCar);
-        createdCarView.setText(Car.createSportsCar());
+    public void ClickSportsCar(View view) {
+        mBinding.setCreatedCar(CarFactory.createSportsCar());
     }
 }
