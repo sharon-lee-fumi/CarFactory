@@ -5,11 +5,10 @@ public class SedanFactory implements CarAbstractFactory {
     public Car createCar() {
         Sedan sedan = new Sedan();
 
-        sedan.engine = new Engine1();
-        sedan.frame = new Frame1();
-        sedan.handle = new Handle1();
-        sedan.wheel = new Wheel1();
-
+        sedan.engine = EngineFactory.createEngine1();
+        sedan.frame = FrameFactory.createFrame1();
+        sedan.handle = HandleFactory.createHandle1();
+        sedan.wheel = WheelFactory.createWheel1();
         return sedan;
     }
 }
