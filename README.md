@@ -1,5 +1,5 @@
 # CarFactory
-AbstractFactory pattern
+Abstract Factory Design Pattern
 
 Car factory manufactures 4 types of cars(sedan, pickup, sports car, suv) and some parts are shared.
 
@@ -16,4 +16,3 @@ Car createPickup();
 Car createSportsCar();
 Car createSUV();
 
-Add color
