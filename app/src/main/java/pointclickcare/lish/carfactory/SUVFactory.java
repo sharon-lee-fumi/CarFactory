@@ -5,10 +5,10 @@ public class SUVFactory implements CarAbstractFactory {
     public Car createCar() {
         SUV suv = new SUV();
 
-        suv.engine = new Engine2();
-        suv.frame = new Frame2();
-        suv.handle = new Handle1();
-        suv.wheel = new Wheel2();
+        suv.engine = EngineFactory.createEngine2();
+        suv.frame = FrameFactory.createFrame2();
+        suv.handle = HandleFactory.createHandle1();
+        suv.wheel = WheelFactory.createWheel2();
 
         return suv;
     }

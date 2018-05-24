@@ -5,10 +5,10 @@ public class SportsCarFactory implements CarAbstractFactory {
     public Car createCar() {
         SportsCar sportsCar = new SportsCar();
 
-        sportsCar.engine = new Engine3();
-        sportsCar.frame = new Frame3();
-        sportsCar.handle = new Handle1();
-        sportsCar.wheel = new Wheel3();
+        sportsCar.engine = EngineFactory.createEngine3();
+        sportsCar.frame = FrameFactory.createFrame3();
+        sportsCar.handle = HandleFactory.createHandle1();
+        sportsCar.wheel = WheelFactory.createWheel3();
 
         return sportsCar;
     }
