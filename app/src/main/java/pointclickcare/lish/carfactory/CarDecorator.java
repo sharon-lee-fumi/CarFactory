@@ -2,7 +2,7 @@ package pointclickcare.lish.carfactory;
 
 public abstract class CarDecorator extends Car{
     protected DecoratedColor color;
-    protected static Car car;
+    protected Car car;
     public CarDecorator(Car car, DecoratedColor color)
     {
         this.car = car;
@@ -12,7 +12,7 @@ public abstract class CarDecorator extends Car{
     @Override
     public String toString() {
         return "[" + car.getClass().getSimpleName() + "]"
-                + "[" + color.getClass().getSimpleName() + "]"
+                + "[" + color.toString() + "]"
                 + "\nengine: " + engine.toString()
                 + "\nframe: " + frame.toString()
                 + "\nhandle: " + handle.toString()
